@@ -5,65 +5,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crone's Cottage | The Gathered Dark</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="overlay"></div>
+    <div class="noise-overlay"></div>
     
-    <header>
-        <h1>Crone's Cottage</h1>
-        <p class="subtitle">The gravity of the earth. Tools for the unseen.</p>
-    </header>
+    <div class="hero">
+        <div class="hero-content fade-in-up">
+            <h1>Crone's Cottage</h1>
+            <div class="divider"></div>
+            <p class="subtitle">The gravity of the earth. Tools for the unseen.</p>
+        </div>
+        <div class="scroll-indicator">
+            <span>Descend</span>
+            <div class="line"></div>
+        </div>
+    </div>
 
     <main>
-        <section class="intro">
-            <p>You did not find this place by accident. You were drawn here by the weight of what you need. We provide the anchors—stone, bone, ash, and arcana.</p>
+        <section class="intro scroll-reveal">
+            <p>You did not find this place by accident.</p>
+            <p>You were drawn here by the weight of what you need. We provide the anchors—stone, bone, ash, and arcana.</p>
         </section>
 
         <section class="offerings">
-            <div class="category">
-                <h2>Crystals & Earth</h2>
-                <p>Raw pull. Obsidian, quartz, amethyst, and bloodstone. Pulled from the dark to ground the current.</p>
-                <div class="product">
-                    <h3>Raw Amethyst Double-Terminated Pendant</h3>
-                    <p class="price">$26.00</p>
-                    <button class="buy-button" onclick="window.location.href='#'">Purchase</button>
+            
+            <article class="category scroll-reveal">
+                <div class="category-image">
+                    <img src="https://images.unsplash.com/photo-1567113463300-102a7eb3cb26?q=80&w=1000&auto=format&fit=crop" alt="Raw Amethyst">
+                    <div class="image-overlay"></div>
                 </div>
-            </div>
+                <div class="category-content">
+                    <h2>Crystals & Earth</h2>
+                    <p class="manifesto">Raw pull. Obsidian, quartz, amethyst, and bloodstone. Pulled from the dark to ground the current.</p>
+                    
+                    <div class="product">
+                        <h3>Raw Amethyst Double-Terminated</h3>
+                        <p class="price">$26.00</p>
+                        <button class="buy-button" onclick="window.location.href='#'">Acquire</button>
+                    </div>
+                </div>
+            </article>
 
-            <div class="category">
-                <h2>Tarot & Divination</h2>
-                <p>The architecture of fate. Decks, pendulums, and casting tools for those who read the silence.</p>
-                <div class="product">
-                    <h3>The Gold Rider-Waite Tarot Deck</h3>
-                    <p class="price">$35.00</p>
-                    <button class="buy-button" onclick="window.location.href='#'">Purchase</button>
+            <article class="category reverse scroll-reveal">
+                <div class="category-image">
+                    <img src="https://images.unsplash.com/photo-1630159495147-38de87cb3b65?q=80&w=1000&auto=format&fit=crop" alt="Tarot Cards">
+                    <div class="image-overlay"></div>
                 </div>
-            </div>
+                <div class="category-content">
+                    <h2>Tarot & Divination</h2>
+                    <p class="manifesto">The architecture of fate. Decks, pendulums, and casting tools for those who read the silence.</p>
+                    
+                    <div class="product">
+                        <h3>The Gold Rider-Waite Deck</h3>
+                        <p class="price">$35.00</p>
+                        <button class="buy-button" onclick="window.location.href='#'">Acquire</button>
+                    </div>
+                </div>
+            </article>
 
-            <div class="category">
-                <h2>Ritual Supplies</h2>
-                <p>The implements of intent. Herbs, resins, altar cloths, and incense. Fuel for the fire.</p>
-                 <div class="product">
-                    <h3>The Moon Smudge Kit</h3>
-                    <p class="price">$22.00</p>
-                    <button class="buy-button" onclick="window.location.href='#'">Purchase</button>
+            <article class="category scroll-reveal">
+                <div class="category-image">
+                    <img src="https://images.unsplash.com/photo-1507925922837-1c264144e4fa?q=80&w=1000&auto=format&fit=crop" alt="Smoke and Incense">
+                    <div class="image-overlay"></div>
                 </div>
-            </div>
+                <div class="category-content">
+                    <h2>Ritual Supplies</h2>
+                    <p class="manifesto">The implements of intent. Herbs, resins, altar cloths, and incense. Fuel for the fire.</p>
+                    
+                     <div class="product">
+                        <h3>The Moon Smudge Kit</h3>
+                        <p class="price">$22.00</p>
+                        <button class="buy-button" onclick="window.location.href='#'">Acquire</button>
+                    </div>
+                </div>
+            </article>
+
         </section>
 
-        <section class="business-info" style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #222; text-align: left; font-size: 0.9rem; color: var(--text-muted);">
-            <h2>Store Policies</h2>
-            <p><strong>Shipping:</strong> Orders are processed and shipped within 2-4 business days. We currently ship to the United States. Shipping costs are calculated at checkout.</p>
-            <p><strong>Returns & Refunds:</strong> Due to the energetic nature of our tools and the energetic clearing required, all sales of ritual supplies, tarot, and crystals are final. If an item arrives damaged, please contact us within 7 days of delivery with photographic evidence, and we will issue a replacement or refund.</p>
-            <p><strong>Contact:</strong> For inquiries regarding your order or the unseen, reach us at inquiries@crones-cottage.com</p>
-            <p><strong>Fulfillment:</strong> Our inventory is sourced from trusted metaphysical suppliers and shipped directly from their curated warehouses to maintain energetic integrity and reduce handling.</p>
-            <p><strong>Terms of Service & Privacy:</strong> By engaging with Crone's Cottage, you acknowledge that our tools are for spiritual and curio purposes only. We do not collect or sell your personal data beyond what is required to fulfill your order and maintain the tether.</p>
+        <section class="business-info scroll-reveal">
+            <h2>The Ledger</h2>
+            <div class="info-grid">
+                <div>
+                    <h3>Fulfillment</h3>
+                    <p>Orders emerge within 2-4 business days. We currently serve the United States. Shipping is calculated at the threshold.</p>
+                </div>
+                <div>
+                    <h3>Returns</h3>
+                    <p>Due to the energetic nature of these tools, all acquisitions are final. If an item arrives broken, contact us within 7 days with proof, and we will restore the balance.</p>
+                </div>
+                <div>
+                    <h3>Contact</h3>
+                    <p>For inquiries regarding your order or the unseen: <br><a href="mailto:inquiries@crones-cottage.com">inquiries@crones-cottage.com</a></p>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Crone's Cottage. Enter the dark willingly.</p>
+        <div class="footer-content">
+            <h2>Crone's Cottage</h2>
+            <p>Enter the dark willingly.</p>
+            <p class="copyright">&copy; 2026. The tether holds.</p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
