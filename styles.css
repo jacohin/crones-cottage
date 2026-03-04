@@ -1,8 +1,8 @@
 :root {
-    --bg-color: #0a0a0a;
-    --text-main: #d4d4d4;
-    --text-muted: #888888;
-    --accent: #8b7355; /* Muted gold/bronze */
+    --bg-color: #050505;
+    --text-main: #b3b3b3;
+    --text-muted: #666666;
+    --accent: #5e5445; 
     --font-heading: 'Cinzel', serif;
     --font-body: 'Cormorant Garamond', serif;
 }
@@ -13,8 +13,8 @@ body, html {
     background-color: var(--bg-color);
     color: var(--text-main);
     font-family: var(--font-body);
-    line-height: 1.6;
-    background-image: radial-gradient(circle at 50% 0%, #1a1a1a 0%, #0a0a0a 70%);
+    line-height: 1.8;
+    background-image: radial-gradient(circle at 50% 0%, #0a0a0a 0%, #000000 100%);
     min-height: 100vh;
 }
 
@@ -26,103 +26,156 @@ body, html {
     height: 100%;
     pointer-events: none;
     background: url('https://www.transparenttextures.com/patterns/stardust.png');
-    opacity: 0.1;
+    opacity: 0.05;
     z-index: 0;
 }
 
 header, main, footer {
     position: relative;
     z-index: 1;
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 0 20px;
     text-align: center;
 }
 
 header {
-    padding-top: 10vh;
-    margin-bottom: 4rem;
+    padding-top: 15vh;
+    margin-bottom: 5rem;
 }
 
 h1 {
     font-family: var(--font-heading);
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 400;
-    letter-spacing: 4px;
-    margin-bottom: 0.5rem;
-    color: var(--accent);
+    letter-spacing: 6px;
+    margin-bottom: 0;
+    color: #4a4236;
+    text-transform: uppercase;
 }
 
 .subtitle {
     font-style: italic;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--text-muted);
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
 }
 
 .intro p {
-    font-size: 1.4rem;
-    max-width: 600px;
-    margin: 0 auto 4rem auto;
+    font-size: 1.3rem;
+    max-width: 500px;
+    margin: 0 auto 5rem auto;
+    color: #8c8c8c;
 }
 
 .offerings {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 3rem;
-    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-bottom: 5rem;
 }
 
 .category {
-    border: 1px solid #222;
-    padding: 2rem;
-    background: rgba(0, 0, 0, 0.4);
-    transition: border-color 0.3s ease;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+    padding: 3rem 0;
+    transition: border-color 0.4s ease;
 }
 
 .category:hover {
-    border-color: var(--accent);
+    border-color: #222;
 }
 
 .category h2 {
     font-family: var(--font-heading);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 400;
     color: var(--accent);
+    letter-spacing: 4px;
     margin-top: 0;
+    text-transform: uppercase;
 }
 
-.category p {
+.category > p {
     font-size: 1.1rem;
     margin-bottom: 2rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.product {
+    margin-top: 2rem;
+}
+
+.product h3 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: #999;
+    margin-bottom: 0.2rem;
+    letter-spacing: 1px;
+}
+
+.price {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .buy-button {
     background-color: transparent;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    padding: 10px 20px;
+    border: 1px solid #222;
+    color: #777;
+    padding: 8px 24px;
     font-family: var(--font-heading);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     cursor: pointer;
-    transition: all 0.3s ease;
-    letter-spacing: 1px;
+    transition: all 0.4s ease;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .buy-button:hover:not([disabled]) {
-    background-color: var(--accent);
-    color: var(--bg-color);
+    border-color: var(--accent);
+    color: #aaa;
 }
 
 .buy-button[disabled] {
-    opacity: 0.5;
+    opacity: 0.3;
     cursor: not-allowed;
-    border-color: #444;
-    color: #444;
 }
 
 footer {
-    padding: 2rem 0;
-    border-top: 1px solid #222;
-    color: var(--text-muted);
-    font-size: 0.9rem;
+    padding: 3rem 0;
+    border-top: 1px solid #111;
+    color: #444;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.business-info {
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 1px solid #111;
+    text-align: left;
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.business-info h2 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: #666;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.business-info p {
+    margin-bottom: 1rem;
+}
+
+.business-info strong {
+    color: #777;
+    font-weight: normal;
 }
