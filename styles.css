@@ -1,0 +1,128 @@
+:root {
+    --bg-color: #0a0a0a;
+    --text-main: #d4d4d4;
+    --text-muted: #888888;
+    --accent: #8b7355; /* Muted gold/bronze */
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Cormorant Garamond', serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    background-image: radial-gradient(circle at 50% 0%, #1a1a1a 0%, #0a0a0a 70%);
+    min-height: 100vh;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.1;
+    z-index: 0;
+}
+
+header, main, footer {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+header {
+    padding-top: 10vh;
+    margin-bottom: 4rem;
+}
+
+h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+}
+
+.subtitle {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+.intro p {
+    font-size: 1.4rem;
+    max-width: 600px;
+    margin: 0 auto 4rem auto;
+}
+
+.offerings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.category {
+    border: 1px solid #222;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    transition: border-color 0.3s ease;
+}
+
+.category:hover {
+    border-color: var(--accent);
+}
+
+.category h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--accent);
+    margin-top: 0;
+}
+
+.category p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.buy-button {
+    background-color: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 10px 20px;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.buy-button:hover:not([disabled]) {
+    background-color: var(--accent);
+    color: var(--bg-color);
+}
+
+.buy-button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: #444;
+    color: #444;
+}
+
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid #222;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
